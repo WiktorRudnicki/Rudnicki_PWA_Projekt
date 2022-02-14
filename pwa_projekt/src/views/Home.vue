@@ -1,11 +1,15 @@
 <template>
-  <div></div>
+  <div>
+    <CatCards></CatCards>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-
-  components: {},
-};
+import CarCards from '../components/CatCards.vue'
+  export default {
+    name: 'Home',
+    components: {
+      CatCards,
+    },
+  }
 </script>
