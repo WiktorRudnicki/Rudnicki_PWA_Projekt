@@ -5,7 +5,6 @@
                 <v-img :src="cat.image"></v-img>
                 <h2> {{cat.name}} </h2>
                 <span>{{cat.description}}</span>
-                <v-btn @click=""> Cat-Position</v-btn>
             </v-card>
         </v-row>
     </v-app>
@@ -23,12 +22,6 @@ export default {
         this.cars = response.data;
         console.log(this.cats);
         console.log(this.response);
-    },
-    methods: {
-        function track(tracker){
-            
-            
-        }
     },
 }    
 </script>

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Nosferatu",
+        "image": "",
+        "description": "A black male cat who resembels a bat with his appearance, hence the name",
+        "gps": ""
+    },
+    {
+        "id": 2,
+        "name":"Medi",
+        "image": "",
+        "description": "Black female cat, lost one of her fangs, loves food",
+        "gps": ""
+    },
+    {
+        "id": 3,
+        "name":"Calimero",
+        "image": "",
+        "description": "Also a black female cat, has a white tip on her tail, loves to sleep, cheeky",
+        "gps": ""
+    },
+    {
+        "id": 4,
+        "name":"Charlie",
+        "image": "",
+        "description": "A gray cat with black strips, very angy",
+        "gps": ""
+    }
+]
