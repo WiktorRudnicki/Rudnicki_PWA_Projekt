@@ -10,18 +10,18 @@
 </template>
 
 <script>
-import LogoBar from './components/LogoBar';
-import axios from "axios";
+import LogoBar from './components/LogoBar.vue';
+
 export default {
   name: 'App',
   data: () => ({
-    cars: [],
+    cats: [],
   }),
-   async created() {
-      
-    },
+  created() {
+
+  },
   components: {
     LogoBar,
-  }
+  },
 };
 </script>

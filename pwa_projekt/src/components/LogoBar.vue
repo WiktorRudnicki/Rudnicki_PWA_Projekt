@@ -1,11 +1,12 @@
 <template>
-    <v-app-bar class=" black" height="200px">
-        <img src="../../public/logo.png" class="mx-2" style="height: 150px; margin-top: 0px"/>
+    <v-app-bar class=" black" height="150px">
+        <img src="../assets/Logo.png" class="mx-2" style="height: 100px; margin-top: 0px">
+        <h1 style="color:White">Cat-Finder</h1>
     </v-app-bar>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+
+};
 </script>

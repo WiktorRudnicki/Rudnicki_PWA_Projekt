@@ -1,5 +1,7 @@
 const express = require('express');
-const {} = require('../model/model');
+const {getCats, deleteCat, addCat} = require('../model/model');
+
+const router = express.Router();
 
 router.get('/cats', getCats);
 router.delete('/cats/catId', deleteCat);

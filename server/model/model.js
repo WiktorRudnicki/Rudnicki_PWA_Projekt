@@ -1,8 +1,8 @@
 let cats = require('../cats.json');
 
 async function getCats(req, res) {
-    const retults = cats;
-    res.status(200).json(retults);
+    const results = cats;
+    res.status(200).json(results);
     return results;
 }
 
