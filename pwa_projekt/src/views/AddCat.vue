@@ -1,7 +1,10 @@
 <template>
     <div>
-        <input v-model="name">
-        <input v-model="description">
+      <v-btn to="/">Home</v-btn>
+      <br>
+      <v-text-field label="Name" solo v-model="name"></v-text-field>
+      <v-textarea v-model="description" label="Description">
+      </v-textarea>
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <LogoBar></LogoBar>
-    <v-main>
+    <v-main class="#FF9E80">
       <v-container>
         <router-view></router-view>
       </v-container>
