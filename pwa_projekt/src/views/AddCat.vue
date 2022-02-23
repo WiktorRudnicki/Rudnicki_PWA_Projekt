@@ -6,11 +6,13 @@
       <v-textarea v-model="description" label="Description">
       </v-textarea>
       <v-btn @click="geoloc()">Get location</v-btn>
+      <vcam></vcam>
       <span>{{lat}}{{long}}</span>
     </div>
 </template>
 
 <script lang="ts">
+import vcam from '../components/Vcam.vue';
 
 export default ({
   name: 'AddCat',
@@ -19,6 +21,7 @@ export default ({
     long: '',
   }),
   components: {
+    vcam,
   },
   props: {
     name: {
