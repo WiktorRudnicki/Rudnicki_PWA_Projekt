@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <LogoBar></LogoBar>
-    <v-main class="#FF9E80">
-      <v-container>
+    <v-main>
+      <v-container class="#FF9E80">
         <router-view></router-view>
       </v-container>
     </v-main>

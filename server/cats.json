@@ -4,27 +4,31 @@
         "name": "Nosferatu",
         "image": "http://127.0.0.1:3000/images/Nosferatu.jpg",
         "description": "A black male cat who resembels a bat with his appearance, hence the name",
-        "gps": ""
+        "lat": "48.2095188",
+        "long": "16.3072594"
     },
     {
         "id": 2,
         "name":"Medi",
         "image": "http://127.0.0.1:3000/images/Medi.jpg",
         "description": "Black female cat, lost one of her fangs, loves food",
-        "gps": ""
+        "lat": "19.075984",
+        "long": "72.877656"
     },
     {
         "id": 3,
         "name":"Calimero",
         "image": "http://127.0.0.1:3000/images/Calimero.jpg",
-        "description": "Also a black male cat, has a white tip on his tail, loves to sleep, cheeky",
-        "gps": ""
+        "description": "Also a black male cat, has a white tip on her tail, loves to sleep, cheeky",
+        "lat": "35.689487",
+        "long": "139.691706"
     },
     {
         "id": 4,
         "name":"Charlie",
         "image": "http://127.0.0.1:3000/images/Charlie.jpg",
         "description": "A gray cat with black strips, very angy",
-        "gps": ""
+        "lat": "55.755826",
+        "long": "37.6173"
     }
 ]

@@ -7,9 +7,10 @@ async function getCats(req, res) {
 }
 
 async function deleteCat(req, res){
-    cats = cats.filter((cat)=> cat.id===req.params.id);
+    cats = cats.filter((cat)=> cat.id != req.params.id);
     const results = cats;
     res.status(200).json(results);
+    console.log(results);
 }
 
 async function addCat(req, res){

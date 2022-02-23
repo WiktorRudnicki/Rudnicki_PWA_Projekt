@@ -8,7 +8,7 @@
                 width="300"></v-img>
                 <h2> {{cat.name}} </h2>
                 <span>{{cat.description}}</span>
-                <a href="https://maps.google.com/maps?&amp;z=15&amp;q=48.2095188+16.3072594&amp;ll=48.2095188+16.3072594" target="_blank" rel="noopener">48.2095188, 16.3072594</a>
+                <a :href="`https://maps.google.com/maps?&amp;z=15&amp;q=${cat.lat}+${cat.long}&amp;ll=${cat.lat}+${cat.long}`" target="_blank" rel="noopener">{{cat.lat}} {{cat.long}}</a>
                 <v-btn @click=DeleteCat(cat.id) class="red">Delete Cat :(</v-btn>
             </v-card>
         </v-row>
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     async DeleteCat(id) {
-      await axios.delete(`http://localhost:3000/${id}`);
+      await axios.delete(`http://localhost:3000/cats/${id}`);
     },
   },
 };
