@@ -2,11 +2,11 @@
   <div>
     <v-easy-camera
       v-model="picture"
-      :fullscreen="fullscreen"
       :mustApprove="approved"
       output="blob"
+      :fullscreen="fullscreen"
       @approve="sendpicture()"
-      @close="backToEvent()"
+      @close="backToCat()"
     ></v-easy-camera>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     return {
       picture: Blob,
       picturebase64: '',
-      fullscreen: true,
+      fullscreen: false,
       approved: true,
     };
   },
@@ -39,8 +39,8 @@ export default {
       };
       this.$emit('image', this.picturebase64);
     },
-    backToEvent() {
-      this.$router.push('/addEvent');
+    backToCat() {
+      this.$router.push('/addCat');
     },
   },
 };

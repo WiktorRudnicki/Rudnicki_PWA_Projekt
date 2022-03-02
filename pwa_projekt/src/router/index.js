@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import AddCat from '../views/AddCat.vue';
+import Vcam from '../components/Vcam.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const routes = [
     path: '/addcat',
     name: 'addcat',
     component: AddCat,
+  },
+  {
+    path: '/catcam',
+    name: 'catcam',
+    component: Vcam,
   },
 ];
 

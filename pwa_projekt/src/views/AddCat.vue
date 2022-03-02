@@ -2,33 +2,38 @@
     <div>
       <v-btn to="/">Home</v-btn>
       <br>
+      <br>
       <v-text-field label="Name" solo v-model="name"></v-text-field>
       <v-textarea v-model="description" label="Description">
       </v-textarea>
       <v-btn @click="geoloc()">Get location</v-btn>
-      <vcam></vcam>
       <span>{{lat}}{{long}}</span>
+      <br>
+      <br>
+      <v-btn to="/catcam">Camera</v-btn>
     </div>
 </template>
 
 <script lang="ts">
-import vcam from '../components/Vcam.vue';
 
 export default ({
   name: 'AddCat',
   data: () => ({
     lat: '',
     long: '',
+    image: '',
   }),
-  components: {
-    vcam,
-  },
   props: {
     name: {
       type: String,
     },
-    description: {
+    desc: {
       type: String,
+    },
+  },
+  computed: {
+    description() {
+      return this.desc;
     },
   },
   methods: {
