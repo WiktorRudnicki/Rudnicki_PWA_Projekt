@@ -6,8 +6,8 @@
       output="blob"
       :fullscreen="fullscreen"
       @approve="sendpicture()"
-      @close="backToCat()"
-    ></v-easy-camera>
+      @close="backToCat()">
+      </v-easy-camera>
   </div>
 </template>
 
@@ -32,12 +32,14 @@ export default {
       const reader = new FileReader();
       reader.readAsDataURL(this.picture);
       // eslint-disable-next-line
-      reader.onloadend = function () {
+      reader.onloadend = ()=> {
         const base64data = reader.result;
-        console.log(base64data);
         this.picturebase64 = base64data;
+        console.log('############################');
+        console.log(this.picturebase64);
+        this.$emit('image', this.picturebase64);
+        this.$router.push('/addCat');
       };
-      this.$emit('image', this.picturebase64);
     },
     backToCat() {
       this.$router.push('/addCat');

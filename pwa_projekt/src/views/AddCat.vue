@@ -4,36 +4,31 @@
       <br>
       <br>
       <v-text-field label="Name" solo v-model="name"></v-text-field>
-      <v-textarea v-model="description" label="Description">
+      <v-textarea v-model="desc" label="Description">
       </v-textarea>
       <v-btn @click="geoloc()">Get location</v-btn>
       <span>{{lat}}{{long}}</span>
       <br>
       <br>
       <v-btn to="/catcam">Camera</v-btn>
+      <v-btn @click="showCat()">Show</v-btn>
     </div>
 </template>
 
 <script lang="ts">
+import axios from 'axios';
 
 export default ({
   name: 'AddCat',
   data: () => ({
     lat: '',
     long: '',
-    image: '',
+    desc: '',
+    name: '',
   }),
   props: {
-    name: {
+    image: {
       type: String,
-    },
-    desc: {
-      type: String,
-    },
-  },
-  computed: {
-    description() {
-      return this.desc;
     },
   },
   methods: {
@@ -43,6 +38,34 @@ export default ({
           this.long = position.coords.longitude;
           this.lat = position.coords.latitude;
         });
+      }
+    },
+    finalcat() {
+      return {
+        name: this.name,
+        description: this.description,
+        long: this.long,
+        lat: this.lat,
+        image: this.image,
+      };
+    },
+    showCat() {
+      console.log(this.name);
+      console.log(this.image);
+      console.log(this.desc);
+      console.log(this.long);
+      console.log(this.lat);
+    },
+    async addEvent() {
+      try {
+        await axios({
+          url: '/addCat',
+          method: 'POST',
+          'content-type': 'application/json',
+          data: this.finalcat(),
+        });
+      } catch (error) {
+        console.log(error);
       }
     },
   },
