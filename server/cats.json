@@ -27,7 +27,7 @@
         "id": 4,
         "name":"Charlie",
         "image": "http://127.0.0.1:3000/images/Charlie.jpg",
-        "description": "A gray cat with black strips, very angy",
+        "description": "A gray cat with black stripes, very angy",
         "lat": "55.755826",
         "long": "37.6173"
     }

@@ -12,10 +12,11 @@
       <br>
       <v-btn to="/catcam">Camera</v-btn>
       <v-btn @click="showCat()">Show</v-btn>
+      <v-btn @click="addCat()">Add</v-btn>
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import axios from 'axios';
 
 export default ({
@@ -40,15 +41,6 @@ export default ({
         });
       }
     },
-    finalcat() {
-      return {
-        name: this.name,
-        description: this.description,
-        long: this.long,
-        lat: this.lat,
-        image: this.image,
-      };
-    },
     showCat() {
       console.log(this.name);
       console.log(this.image);
@@ -56,17 +48,24 @@ export default ({
       console.log(this.long);
       console.log(this.lat);
     },
-    async addEvent() {
+    async addCat() {
       try {
         await axios({
-          url: '/addCat',
+          url: '/cats',
           method: 'POST',
           'content-type': 'application/json',
-          data: this.finalcat(),
+          data: {
+            name: this.name,
+            image: this.image,
+            description: this.desc,
+            lat: this.lat,
+            long: this.long,
+          },
         });
       } catch (error) {
         console.log(error);
       }
+      this.$router.push({ path: '/' });
     },
   },
 });

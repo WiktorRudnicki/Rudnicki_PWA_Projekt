@@ -4,11 +4,21 @@ const helmet = require('helmet');
 const path = require('path');
 const cors = require('cors');
 const routes = require('./routes/routes.js');
+const bodyParser = require('body-parser');
 
 require('colors');
 require('dotenv').config();
 
 const app = express();
+
+app.use(
+    bodyParser.urlencoded({
+      limit: '15mb',
+      extended: false,
+      type: '',
+    }),
+  );
+  app.use(bodyParser.json({ limit: '5mb' }));
 
 app.use(morgan('dev'));
 

@@ -4,6 +4,7 @@
       v-model="picture"
       :mustApprove="approved"
       output="blob"
+      :reslution="{ width: 300, height: 300 }"
       :fullscreen="fullscreen"
       @approve="sendpicture()"
       @close="backToCat()">
@@ -22,7 +23,7 @@ export default {
     return {
       picture: Blob,
       picturebase64: '',
-      fullscreen: false,
+      fullscreen: true,
       approved: true,
     };
   },
@@ -35,7 +36,6 @@ export default {
       reader.onloadend = ()=> {
         const base64data = reader.result;
         this.picturebase64 = base64data;
-        console.log('############################');
         console.log(this.picturebase64);
         this.$emit('image', this.picturebase64);
         this.$router.push('/addCat');

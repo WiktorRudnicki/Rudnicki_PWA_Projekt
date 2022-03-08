@@ -24,14 +24,14 @@ export default {
 
   }),
   async created() {
-    const response = await axios.get('http://localhost:3000/cats');
+    const response = await axios.get('/cats');
     this.cats = response.data;
     console.log(this.cats);
     console.log(this.response);
   },
   methods: {
     async DeleteCat(id) {
-      await axios.delete(`http://localhost:3000/cats/${id}`);
+      await axios.delete(`/cats/${id}`);
     },
   },
 };
