@@ -1,17 +1,21 @@
 <template>
-    <div>
-      <v-btn to="/">Home</v-btn>
+    <div class="d-flex flex-column justify-content-center">
+      <v-btn color="primary" to="/">Home</v-btn>
       <br>
       <br>
       <v-text-field label="Name" solo v-model="name"></v-text-field>
       <v-textarea v-model="desc" label="Description">
       </v-textarea>
       <v-btn @click="geoloc()">Get location</v-btn>
+      <br>
       <span>{{lat}}{{long}}</span>
       <br>
-      <br>
       <v-btn to="/catcam">Camera</v-btn>
+      <br>
+      <br>
       <v-btn @click="showCat()">Show</v-btn>
+      <br>
+      <br>
       <v-btn @click="addCat()">Add</v-btn>
     </div>
 </template>

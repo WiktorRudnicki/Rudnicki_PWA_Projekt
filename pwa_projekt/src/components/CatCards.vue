@@ -32,6 +32,7 @@ export default {
   methods: {
     async DeleteCat(id) {
       await axios.delete(`/cats/${id}`);
+      window.location.reload();
     },
   },
 };
